@@ -172,7 +172,7 @@
           <li>✓ Contact form setup</li>
           <li>✓ 7 days delivery</li>
         </ul>
-        <a href="#contact" class="mt-8 text-center px-5 py-3 rounded-xl glass font-semibold text-white hover:border-amber-400/50 transition">Choose Starter</a>
+        <a href="#contact" data-package="Starter" class="mt-8 text-center px-5 py-3 rounded-xl glass font-semibold text-white hover:border-amber-400/50 transition">Choose Starter</a>
       </div>
 
       <!-- Growth (popular) -->
@@ -188,7 +188,7 @@
           <li>✓ 14 days delivery</li>
           <li>✓ 30 days free support</li>
         </ul>
-        <a href="#contact" class="btn-amber mt-8 text-center px-5 py-3 rounded-xl font-semibold">Choose Growth</a>
+        <a href="#contact" data-package="Growth" class="btn-amber mt-8 text-center px-5 py-3 rounded-xl font-semibold">Choose Growth</a>
       </div>
 
       <!-- Enterprise -->
@@ -202,7 +202,7 @@
           <li>✓ AI features integration</li>
           <li>✓ Dedicated project manager</li>
         </ul>
-        <a href="#contact" class="mt-8 text-center px-5 py-3 rounded-xl glass font-semibold text-white hover:border-amber-400/50 transition">Request Quote</a>
+        <a href="#contact" data-package="Custom SaaS" class="mt-8 text-center px-5 py-3 rounded-xl glass font-semibold text-white hover:border-amber-400/50 transition">Request Quote</a>
       </div>
     </div>
   </div>
@@ -302,6 +302,17 @@
           <option>$5,000+</option>
         </select>
       </div>
+      
+    <div class="md:col-span-2">
+      <label class="label">Interested In</label>
+      <select id="packageField" name="package" class="input">
+      <option value="">Not sure yet</option>
+      <option value="Starter">Starter ($499)</option>
+      <option value="Growth">Growth ($1,200)</option>
+      <option value="Custom SaaS">Custom SaaS (Let's talk)</option>
+      </select>
+    </div>
+      
       <div class="md:col-span-2">
         <label class="label">Project Details *</label>
         <textarea name="message" rows="5" required class="input" placeholder="Describe your project, goals and deadline."></textarea>
