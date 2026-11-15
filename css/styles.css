@@ -100,3 +100,56 @@ body {
 /* Entrance animation for sections */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ===== Form fields ===== */
+.label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+}
+
+.input {
+  width: 100%;
+  background: rgba(2,6,23,0.6);
+  border: 1px solid rgba(51,65,85,0.8);
+  color: #e2e8f0;
+  border-radius: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input::placeholder { color: #64748b; }
+.input:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251,191,36,0.15);
+}
+select.input option { background: #0f172a; }
+textarea.input { resize: vertical; }
+
+/* ===== Pricing badge fix ===== */
+/* Let the "Most Popular" badge show outside the card */
+.tilt.popular { overflow: visible; }
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  white-space: nowrap;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1c1917;
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  pointer-events: none;
+}
+
+/* Keep card content above the tilt glow layer */
+.tilt > * { position: relative; z-index: 1; }
+
+/* Stop the card from moving when hovering the badge area */
+.tilt.popular:hover { transform: none !important; }
