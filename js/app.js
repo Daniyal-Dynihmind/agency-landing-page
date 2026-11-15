@@ -64,6 +64,12 @@ contactForm.addEventListener('submit', e => {
   formStatus.textContent = '✅ Thank you! We will reply within 24 hours.';
   formStatus.className = 'text-xs text-emerald-400';
 });
+
+document.querySelectorAll('[data-package]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('packageField').value = btn.dataset.package;
+  });
+});
 revealEls.forEach(el => observer.observe(el));
 
 /* ============ ICONS ============ */
