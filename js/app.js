@@ -47,6 +47,23 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
+/* ============ CONTACT FORM (saves to LocalStorage) ============ */
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+contactForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(contactForm).entries());
+
+  // Save inquiries locally so you can review them in the browser console
+  const inquiries = JSON.parse(localStorage.getItem('nexora_inquiries') || '[]');
+  inquiries.push({ ...data, date: new Date().toISOString() });
+  localStorage.setItem('nexora_inquiries', JSON.stringify(inquiries));
+
+  contactForm.reset();
+  formStatus.textContent = '✅ Thank you! We will reply within 24 hours.';
+  formStatus.className = 'text-xs text-emerald-400';
+});
 revealEls.forEach(el => observer.observe(el));
 
 /* ============ ICONS ============ */
