@@ -1,1 +1,102 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #05060a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
 
+/* Navbar glass when scrolled */
+.nav-wrap {
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-wrap.scrolled {
+  background: rgba(5,6,10,0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.8);
+}
+
+/* Hero background glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(245,158,11,0.25), transparent 60%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* Gradient text */
+.grad-text {
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass surface */
+.glass {
+  background: linear-gradient(145deg, rgba(15,23,42,0.75), rgba(15,23,42,0.35));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148,163,184,0.12);
+  box-shadow: 0 8px 32px -12px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Amber button */
+.btn-amber {
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  color: #1c1917;
+  box-shadow: 0 8px 24px -8px rgba(249,115,22,0.6);
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+.btn-amber:hover { transform: translateY(-1px); filter: brightness(1.07); }
+.btn-amber:active { transform: scale(0.98); }
+
+/* 3D tilt card */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.tilt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(251,191,36,0.13), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.tilt:hover::after { opacity: 1; }
+.tilt:hover {
+  border-color: rgba(251,191,36,0.4);
+  box-shadow: 0 20px 50px -15px rgba(251,191,36,0.2);
+}
+
+/* Icon box */
+.icon-box {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(251,191,36,0.12);
+}
+
+/* Step number */
+.step-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Entrance animation for sections */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
