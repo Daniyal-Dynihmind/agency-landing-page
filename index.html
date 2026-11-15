@@ -1,5 +1,160 @@
-<html>
-  <body>
-    <h1>hello agency how are u </h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora Digital | Web Apps, SaaS & Business Websites</title>
+  <meta name="description" content="Nexora Digital builds fast, modern web apps, SaaS products and business websites for startups and agencies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="nav-wrap fixed top-0 inset-x-0 z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 py-4">
+      <a href="#top" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/30">
+          <i data-lucide="hexagon" class="w-5 h-5 text-slate-950"></i>
+        </div>
+        <span class="text-lg font-extrabold tracking-tight text-white">Nexora<span class="text-amber-400">Digital</span></span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
+        <li><a href="#process" class="hover:text-amber-400 transition">Process</a></li>
+        <li><a href="#pricing" class="hover:text-amber-400 transition">Pricing</a></li>
+        <li><a href="#faq" class="hover:text-amber-400 transition">FAQ</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="btn-amber hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold">Get a Quote</a>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-800/60" aria-label="Open menu">
+          <i data-lucide="menu" class="w-6 h-6 text-slate-200"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-5 pb-5">
+      <div class="glass rounded-2xl p-5 space-y-4 text-slate-200 font-medium">
+        <a href="#services" class="block hover:text-amber-400">Services</a>
+        <a href="#process" class="block hover:text-amber-400">Process</a>
+        <a href="#pricing" class="block hover:text-amber-400">Pricing</a>
+        <a href="#faq" class="block hover:text-amber-400">FAQ</a>
+        <a href="#contact" class="btn-amber block text-center px-5 py-2.5 rounded-xl text-sm font-semibold">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero relative overflow-hidden pt-36 md:pt-44 pb-20 px-5">
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold text-amber-300 glass mb-6">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Accepting new projects this month
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+          We Turn Your Ideas Into <span class="grad-text">Products That Sell</span>
+        </h1>
+        <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto">
+          Nexora Digital designs and builds fast, modern web apps, SaaS platforms and business websites. From idea to launch in days, not months.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contact" class="btn-amber px-7 py-3.5 rounded-xl font-semibold">Start Your Project</a>
+          <a href="#services" class="px-7 py-3.5 rounded-xl font-semibold glass text-white hover:border-amber-400/50 transition">Explore Services</a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-16 max-w-3xl mx-auto">
+          <div class="glass tilt rounded-2xl p-5">
+            <p class="text-3xl font-extrabold text-white">40+</p>
+            <p class="text-xs text-slate-400 mt-1">Projects Delivered</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-5">
+            <p class="text-3xl font-extrabold text-white">7 days</p>
+            <p class="text-xs text-slate-400 mt-1">Average MVP Time</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-5">
+            <p class="text-3xl font-extrabold text-white">98%</p>
+            <p class="text-xs text-slate-400 mt-1">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="py-20 px-5">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14">
+          <p class="text-sm font-semibold text-amber-400 uppercase tracking-widest">Services</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">Everything you need to launch online</h2>
+          <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Pick one service or combine them. We build what your business actually needs.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="glass tilt rounded-2xl p-7">
+            <div class="icon-box"><i data-lucide="layout" class="w-5 h-5 text-amber-400"></i></div>
+            <h3 class="text-xl font-bold text-white mt-5">Business Websites</h3>
+            <p class="text-slate-400 mt-2">Fast, responsive, SEO-ready websites that turn visitors into customers.</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-7">
+            <div class="icon-box"><i data-lucide="rocket" class="w-5 h-5 text-amber-400"></i></div>
+            <h3 class="text-xl font-bold text-white mt-5">MVP & Web Apps</h3>
+            <p class="text-slate-400 mt-2">Validate your startup idea with a working product in as little as one week.</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-7">
+            <div class="icon-box"><i data-lucide="bar-chart-3" class="w-5 h-5 text-amber-400"></i></div>
+            <h3 class="text-xl font-bold text-white mt-5">SaaS & Dashboards</h3>
+            <p class="text-slate-400 mt-2">CRMs, admin panels, booking systems and analytics dashboards built for your workflow.</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-7">
+            <div class="icon-box"><i data-lucide="bot" class="w-5 h-5 text-amber-400"></i></div>
+            <h3 class="text-xl font-bold text-white mt-5">AI Integration</h3>
+            <p class="text-slate-400 mt-2">Add AI features like smart summaries, chat assistants and automation to your product.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section id="process" class="py-20 px-5">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14">
+          <p class="text-sm font-semibold text-amber-400 uppercase tracking-widest">Process</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">How we work</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="glass tilt rounded-2xl p-7">
+            <span class="step-num">01</span>
+            <h3 class="text-xl font-bold text-white mt-5">Discover</h3>
+            <p class="text-slate-400 mt-2">We understand your goals, audience and features, and send a clear plan with a fixed quote.</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-7">
+            <span class="step-num">02</span>
+            <h3 class="text-xl font-bold text-white mt-5">Build</h3>
+            <p class="text-slate-400 mt-2">You get regular previews and updates. Feedback is included at every stage.</p>
+          </div>
+          <div class="glass tilt rounded-2xl p-7">
+            <span class="step-num">03</span>
+            <h3 class="text-xl font-bold text-white mt-5">Launch</h3>
+            <p class="text-slate-400 mt-2">We deploy your product live, hand over the code and provide post-launch support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next parts (Pricing, Testimonials, FAQ, Contact, Footer) will be added in Part 2 -->
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
 </html>
